@@ -9,6 +9,8 @@ minikube start --driver virtualbox --no-vtx-check --memory 8192 --cpus 4
 
 ## Use Deployment YAML
 
+Store the following content as `deployment.yml`.
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -32,6 +34,14 @@ spec:
         ports:
         - containerPort: 80
 ```
+
+Apply the yml file:
+
+```sh
+minikube kubectl -- apply -f deployment.yml
+```
+
+Check the cluster:
 
 ```sh
 minikube kubectl -- get all
