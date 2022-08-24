@@ -37,6 +37,7 @@ $ kubectl port-forward pods/psql-test-postgresql-0 5432:5432
 
 ```shell
 $ ./mvnw spring-boot:build-image
+```
 
 ### Create and apply deployment yaml
 
