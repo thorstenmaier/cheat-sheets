@@ -4,13 +4,17 @@
 
 Follow chapter 1 of this [manual](https://phoenixnap.com/kb/postgresql-kubernetes)
 
+```shell
+helm install psql-test bitnami/postgresql --set persistence.existingClaim=postgresql-pv-claim --set volumePermissions.enabled=true
+```
+
 Default settings:
 - Database name: postgres
 - Username: postgres
 - Password: auto generated and written into a K8s secret
 
 ```shell
-$ kubectl get secret --namespace default psql-test-postgresql -o jsonpath="{.data.postgresql-password}" | base64 --decode
+kubectl get secret psql-test-postgresql -o jsonpath="{.data.postgres-password}" | base64 --decode
 ```
 
 ## Activate direct accessing to the Postgres Pod
@@ -18,7 +22,7 @@ $ kubectl get secret --namespace default psql-test-postgresql -o jsonpath="{.dat
 This is useful for accessing the db with a database management tool
 
 ```shell
-$ kubectl port-forward pods/psql-test-postgresql-0 5432:5432
+kubectl port-forward pods/psql-test-postgresql-0 5432:5432
 ```
 
 ## Build and deploy Spring service with DB access
@@ -36,7 +40,7 @@ $ kubectl port-forward pods/psql-test-postgresql-0 5432:5432
 ### Build docker image
 
 ```shell
-$ ./mvnw spring-boot:build-image
+./mvnw spring-boot:build-image
 ```
 
 ### Create and apply deployment yaml
