@@ -51,7 +51,7 @@ kind: Deployment
 metadata:
   name: usermanagement-deployment
   labels:
-    app: nginx
+    app: usermanagement
 spec:
   replicas: 1
   selector:
@@ -64,7 +64,7 @@ spec:
     spec:
       containers:
       - name: usermanagement
-        image: usermanagement:0.0.2-SNAPSHOT
+        image: usermanagement:0.0.1-SNAPSHOT
         ports:
         - containerPort: 8080
         env:
