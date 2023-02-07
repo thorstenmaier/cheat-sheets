@@ -6,7 +6,7 @@
 # Journey
 
 - https://www.linkedin.com/pulse/my-ckad-exam-experience-atharva-chauthaiwale/ (/)
-- https://medium.com/@harioverhere/ckad-certified-kubernetes-application-developer-my-journey-3afb0901014
+- https://medium.com/@harioverhere/ckad-certified-kubernetes-application-developer-my-journey-3afb0901014 (/)
 
 # Save time
 
@@ -38,3 +38,9 @@ set tabstop=2
 - Before you attempt a new question, be sure to execute command to switch contexts. It is given at the start of the question
 - Sometimes you need to ssh to another node or change to root user. Beware of where you are all the time on bash terminal.
 - Note down questions and its percentage ( only in the note pad provided by exam environment ) if you want to skip the question for later. This strategy really helped me when there was a time crunch and I had to cover as much ground as possible 
+- I would highly recommend that questions be answered based on their weight-age. All the questions have their weight-age displayed. There are some questions with lower weight-age that will consume more time. So its better to come back to these questions once you are done with questions of higher weight-age.
+Time and speed are critical. 2 hrs yes, but since the format of the exam is hands on its quite important to keep a check on the time. Get as much as practice as you can.
+- Resist the urge to answer the questions sequentially.
+- The notepad is your friend. For questions that you want to come back later and answer, make a note of it in the notepad provided in the exam to note the question number and its weightage. Doing this will help you to prioritize which questions you want to take a look at.
+- If you are from windows background like me, then get some understanding on volume mounts, ssh, linux file systems
+- Read the instructions given before the start of the exam on how to copy and paste from kubernetes.io documentation into the shell.
