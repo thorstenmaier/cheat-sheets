@@ -44,3 +44,25 @@ Time and speed are critical. 2 hrs yes, but since the format of the exam is hand
 - The notepad is your friend. For questions that you want to come back later and answer, make a note of it in the notepad provided in the exam to note the question number and its weightage. Doing this will help you to prioritize which questions you want to take a look at.
 - If you are from windows background like me, then get some understanding on volume mounts, ssh, linux file systems
 - Read the instructions given before the start of the exam on how to copy and paste from kubernetes.io documentation into the shell.
+
+## Helpers
+
+### Set namespace
+
+`k config set-context --namespace=... --current`
+
+### YAML syntax documentation
+* `k explain pod --recursive | less`
+* `/searchTerm`
+
+## Fastest way to create resources YAMLs
+
+### Pod
+`k run --image=nginx --dry-run=client -o yaml my-nginx`
+
+### Deployment
+`k create deployment --image=nginx --dry-run=client -o yaml my-nginx`
+
+### Service
+`k create service nodeport --dry-run=client -o yaml --tcp 80:80 my-service`
+
