@@ -66,3 +66,7 @@ Time and speed are critical. 2 hrs yes, but since the format of the exam is hand
 ### Service
 `k create service nodeport --dry-run=client -o yaml --tcp 80:80 my-service`
 
+### PV, PVC, Pod using Volume
+
+https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+
